@@ -1,5 +1,6 @@
 from os import path
 import argparse
+from os import path
 
 
 def   main ( ) :
@@ -9,10 +10,14 @@ def   main ( ) :
 
    args  = parser.parse_args ()
    total = sum(args.integers)  #sum all integers
+   current_dir = path.abspath ( path.curdir )
 
+   print (f"Running from path {current_dir}"  )
    print ( f"Arguments are: {args.integers}"
    )
-   print ( f"Total: {total}")
+   print (
+    f"Total: {total}"
+   )
 
 
 main (  )
